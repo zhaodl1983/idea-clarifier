@@ -1,10 +1,10 @@
-# Changelog
+# 更新日志
 
 ## v0.1
 
-- Initial Agent Skill release.
-- Defines the `idea-clarifier` skill name and standard Agent Skills structure.
-- Adds product manager and investor gate workflow.
-- Adds PM Gate and Investment Gate rubrics.
-- Adds PRD and low-fidelity wireframe templates.
-- Adds eval cases and trigger-query examples.
+- 首次发布 Agent Skill。
+- 定义 `idea-clarifier` Skill 名称和标准 Agent Skills 结构。
+- 增加产品经理门禁和投资人门禁工作流。
+- 增加 PM Gate 与 Investment Gate 评分规则。
+- 增加 PRD 和低保真逻辑线框图模板。
+- 增加 eval 测试用例和触发查询示例。
