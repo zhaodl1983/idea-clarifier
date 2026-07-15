@@ -1,0 +1,47 @@
+{
+  "skill_name": "idea-clarifier",
+  "evals": [
+    {
+      "id": "vague-ai-tool-refuses-prd",
+      "prompt": "我想做一个 AI 工具，帮职场人提升效率。请直接给我 PRD。",
+      "expected_output": "The output refuses premature PRD generation, states Phase 0 or intake, identifies vague phrases, and asks no more than 3 concrete clarification questions.",
+      "assertions": [
+        "The output does not include a full PRD.",
+        "The output names the current phase as intake or Phase 0.",
+        "The output points out that terms like AI 工具, 职场人, or 提升效率 are too vague.",
+        "The output asks no more than 3 numbered questions."
+      ]
+    },
+    {
+      "id": "pm-gate-blocks-investor",
+      "prompt": "产品是给所有中小企业老板用的管理平台，可以管理员工、客户、财务、审批，还能用 AI 分析数据。你直接进入投资人视角吧。",
+      "expected_output": "The output refuses to enter investor mode because PM Gate is not passed, explains why the scope is unfocused, and continues PM interrogation.",
+      "assertions": [
+        "The output does not enter Investment Gate or investor judgment.",
+        "The output identifies the target user or scope as too broad.",
+        "The output asks concrete PM clarification questions."
+      ]
+    },
+    {
+      "id": "conditional-prd-validation-mvp",
+      "prompt": "目标用户是 20-80 人的外贸销售团队主管。每天要从邮件和 WhatsApp 整理客户跟进状态，人工要 1 小时。MVP 是导入聊天记录，自动生成跟进清单和风险提醒。主管愿意每月付 299 元，如果能把整理时间降到 10 分钟。第一批用户来自我认识的 15 个外贸老板。",
+      "expected_output": "The output should run PM-level scrutiny or PM Gate first, not skip directly to PRD. If it conditionally passes, it should carry assumptions into investor interrogation.",
+      "assertions": [
+        "The output uses PM Gate or PM interrogation before investor interrogation.",
+        "The output does not produce a full PRD immediately.",
+        "The output identifies unresolved assumptions around willingness to pay, data access, or validation."
+      ]
+    },
+    {
+      "id": "full-flow-keeps-phase-3",
+      "prompt": "以下信息已经过访谈初步确认，请按完整流程给出 PM Gate、Investment Gate、PRD 和低保真逻辑线框图。产品想法：外贸销售跟进整理助手。目标用户：20-80 人外贸公司里的销售主管。场景：主管每天从邮件、WhatsApp 和 CRM 里整理客户跟进状态，人工约 60 分钟，且经常漏掉 3 天未回复的高意向客户。MVP：导入邮件/WhatsApp 导出记录和 CRM 客户表，自动生成今日跟进清单和风险客户提醒。价值：把每日整理时间从 60 分钟降到 10 分钟。付费方：老板或销售主管。定价假设：299 元/月/团队。第一批用户：认识 15 个外贸老板，可做 5 家试点。Kill criteria：5 家里少于 2 家愿意连续使用第二周；没有任何一家愿意付费；风险提醒准确率低于 70%。",
+      "expected_output": "The output should preserve all phases explicitly, including Phase 3 Investor Interrogation before Phase 4 Investment Gate.",
+      "assertions": [
+        "The output includes Phase 2: PM Gate.",
+        "The output includes Phase 3: Investor Interrogation before Phase 4: Investment Gate.",
+        "The output includes investor scrutiny before investment judgment.",
+        "The output only produces PRD after Investment Gate reaches 观察 or 可小额试投."
+      ]
+    }
+  ]
+}

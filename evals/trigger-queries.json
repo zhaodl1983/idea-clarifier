@@ -1,0 +1,26 @@
+[
+  {
+    "query": "我有个新产品想法，想先被你拷问一下，看能不能立项。",
+    "should_trigger": true
+  },
+  {
+    "query": "帮我把这个模糊需求澄清到可以写 PRD。",
+    "should_trigger": true
+  },
+  {
+    "query": "我想做一个创业项目，先从投资人视角挑战我。",
+    "should_trigger": true
+  },
+  {
+    "query": "直接帮我用 React 写一个登录页。",
+    "should_trigger": false
+  },
+  {
+    "query": "请润色这篇产品发布文章，让语气更自然。",
+    "should_trigger": false
+  },
+  {
+    "query": "帮我画一个高保真移动端 UI 设计稿。",
+    "should_trigger": false
+  }
+]

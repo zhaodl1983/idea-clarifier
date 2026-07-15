@@ -1,0 +1,7 @@
+interface:
+  display_name: "产品想法澄清官"
+  short_description: "立项前无情澄清产品想法与商业假设"
+  default_prompt: "Use $idea-clarifier to challenge my product idea before writing a PRD."
+
+policy:
+  allow_implicit_invocation: true
